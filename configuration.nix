@@ -152,8 +152,6 @@
   environment.sessionVariables = {
     # If cursor becomes invisible
     WLR_NO_HARDWARE_CURSORS = "1";
-    # Hint electron apps to use Wayland
-    NIXOS_OZONE_WL = "1";
   };
 
   # Allow unfree packages
