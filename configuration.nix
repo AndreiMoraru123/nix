@@ -163,6 +163,7 @@
   environment.systemPackages = with pkgs; [
     nixfmt-classic
     neofetch
+    ripgrep
     cargo
     go
     nodejs
