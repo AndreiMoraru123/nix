@@ -162,6 +162,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nixfmt-classic
+    cargo
+    go
+    nodejs
+    nil
     xclip
     git
     unzip
