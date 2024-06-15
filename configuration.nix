@@ -178,11 +178,11 @@
     libnotify
     swww
     kitty
+    fzf
     rofi-wayland
     (waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
     }))
-
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -221,6 +221,30 @@
   # Desktop portals
   xdg.portal.enable = true;
 
+  # Docker
   virtualisation.docker.enable = true;
+
+  # Zsh
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch";
+    };
+  };
+
+  programs.zsh = {
+    ohMyZsh = {
+      enable = true;
+      plugins = [ "git"];
+      theme = "robbyrussell";
+    };
+  };
+
+  users.defaultUserShell = pkgs.zsh;
 
 }
