@@ -162,6 +162,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nixfmt-classic
+    neofetch
     cargo
     go
     nodejs
@@ -181,7 +182,6 @@
     mako
     libnotify
     swww
-    kitty
     fzf
     rofi-wayland
     (waybar.overrideAttrs (oldAttrs: {
