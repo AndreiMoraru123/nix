@@ -235,9 +235,7 @@
       ll = "ls -l";
       update = "sudo nixos-rebuild switch";
     };
-  };
 
-  programs.zsh = {
     ohMyZsh = {
       enable = true;
       plugins = [ "git"];
